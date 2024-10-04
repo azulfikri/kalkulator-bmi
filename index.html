@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="asset\favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="main-title">
+      <h1>Kalkulator BMI</h1><img src="asset\bmi_10580665.png" class="logo-bmi" alt="bwi-kalkulator">
+    </header>
+
+    <main>
+      <aside class="aside-main">
+        <article>
+          <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di BMI Kalkulator.</p>
+        </article>
+        <form id="bmi-form">
+          <h3>Pilih Jenis Kelamin:</h3>
+          <div class="gender-option">
+            <label>
+              <input type="radio" name="gender" value="laki-laki" id="gender-male"><img src="asset\man.png" alt="laki-laki">
+              <p>Laki-laki</p>
+            </label>
+          </div>
+          <div class="gender-option">
+            <label>
+              <input type="radio" name="gender" value="perempuan" id="gender-female"><img src="asset\woman.png" alt="perempuan">
+              <p>Perempuan</p>
+            </label>
+          </div>
+          <div class="input-data">
+            <label for="age">Umur</label>
+            <input type="number" id="age">
+          </div>
+          <div class="input-data">
+            <label for="tb">Tinggi Badan (cm)</label>
+            <input type="number" id="tb">
+          </div>
+          <div class="input-data">
+            <label for="bb">Berat Badan (kg)</label>
+            <input type="number" id="bb">
+          </div>
+          <div class="button-input">
+            <button type="button" class="btn-hitung" onclick="hitungBMI()">Hitung</button>
+            <button type="button" class="btn-reset" onclick="resetForm()">&#10227 Reset</button>
+          </div>
+        </form>
+
+        <article class="fitur-bmi">
+          <h2>Keunggulan Fitur</h2>
+          <ol>
+            <li>Menghitung Berat Badan</li>
+            <li>Menentukan Kategori Berat Badan Ideal atau Tidak</li>
+            <li>Mempersiapkan Program Penurunan Berat Badan</li>
+          </ol>
+          <p class="satu">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan dari BMI ini)
+            dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memiliki syarat seperti halnya Dokter.
+          </p>
+          <p class="dua">
+            Kalkulator akan memberikan anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indeks Massa Tubuh (BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter)
+            atau BMI = Kg/M<sup>2</sup>
+          </p>
+        </article>
+      </aside>
+
+      <aside class="aside-hasil">
+        <section>
+          <div id="hasil" style="display: none;">
+            <h3 class="hasil-title">Nilai BMI</h3>
+            <p id="hasilBMI"></p>
+            <p>Anda dalam kategori</p>
+            <p id="kategoriBMI"></p>
+            <h3 class="desc-title">Deskripsi</h3>
+            <p id="desc"></p>
+          </div>  
+          <article class="fyi">
+            <h2>Apa itu Kalkulator BMI?</h2>
+            <p class="definisi">Kalkulator BMI adalah alat untuk mengidentifikasi apakah berat badan kamu termasuk dalam kategori ideal atau tidak. Kalkulator ini dapat digunakan oleh seseorang yang berusia 20 tahun ke atas.</p>
+            <p class="peringatan">Perlu diingat bahwa Kalkulator BMI ini tidak dapat diaplikasikan untuk ibu hamil dan anak-anak karena standar BMI yang berbeda.</p>
+            <p>Hal yang perlu diperhatikan pada Kalkulator BMI:</p>
+            <ul class="emoji">
+              <li>BMI Normal berada pada kisaran 17-25</li>
+              <li>Jika angka BMI melebihi 25, maka kamu memiliki berat badan berlebih</li>
+              <li>Jika angka BMI berada di bawah 17, maka kamu memiliki berat badan rendah</li>
+              <li>Jika angka BMI sudah melebihi angka 27, sebaiknya segera dilakukan penanganan untuk mencegah timbulnya penyakit</li>
+           </ul> 
+            <p class="fyi-end">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+          </article>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>DC Community</h3>
+            <p>Komunitas kami menyediakan layanan terbaik untuk membantu dan mengatasi permasalahan anda. Okeyyyy</p>
+        </div>
+
+        <!-- <div class="footer-column">
+            <h3>Tentang Kami</h3>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div> -->
+
+        <div class="footer-column">
+            <h3>Hubungi Kami</h3>
+            <p>Email: community@demtimcod.com</p>
+            <p>Telepon: +62897765643</p>
+            <p>Alamat: Jl. Jalmak Punk</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Ikuti Kami</h3>
+            <div class="social-icons">
+                <a href="https://github.com/Demtimcod"><img src="asset\github.png" alt="Github"></a>
+                <a href="https://t.me/fullstuckdevelopment"><img src="asset\tele.png" alt="Telegram"></a>
+                <a href="https://instagram.com/dssquatit"><img src="asset\instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Demtimcode. Semua hak cipta dilindungi | by Zuldev</p>
+    </div>
+</footer>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>

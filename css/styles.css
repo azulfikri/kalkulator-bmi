@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #8E9EAB;
+  color: #f8f8f8;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.main-title .logo-bmi {
+  width: 80px;
+}
+
+.main-title h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  width: 50%;
+}
+
+.aside-hasil, .aside-main {
+  padding: 2rem ;
+  
+}
+
+.aside-hasil {
+  border-radius: 10px;
+  background-color: #D1CCC0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.aside-main {
+  border-radius: 10px;
+  background-color: #D1CCC0;
+  color: #8B322C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 5px;
+  overflow: hidden;
+}
+
+article, section{
+  text-align: justify;
+}
+
+#bmi-form {
+  color:#FAF3DD;
+  background-color: #6D8764;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gender-option {
+  display: inline-block;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.gender-option p {
+  margin: 0;
+}
+
+.gender-option img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.gender-option input[type="radio"] {
+  display: none;
+}
+
+.gender-option input[type="radio"]:checked + img {
+  transform: scale(1.3);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.input-data {
+  margin-top: 10px;
+}
+
+.input-data label {
+  font-weight: bold;
+}
+
+.input-data input {
+  width: 95%;
+  height: 10px;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  box-shadow: 3px 3px #2c3927;
+}
+
+.input-data input:focus {
+  outline: none;
+}
+
+.button-input {
+  display: flex;
+  justify-content: stretch;
+  margin-top: 35px;
+}
+
+.button-input button {
+  cursor: pointer;
+  color: #f8f8f8;
+  border: none;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.btn-hitung {
+  background-color: #0d6efd;
+  box-shadow: 3px 3px #0056b3;
+  transition: transform 0.3s ease;
+}
+
+.btn-hitung:hover {
+  transform: scale(1.2);
+}
+
+.btn-hitung:active {
+  transform: scale(0.9);
+}
+
+.btn-reset {
+  margin-left: 20px;
+  background-color: #df0c0c;
+  box-shadow: 3px 3px #8c0a0a;
+  transition: transform 0.3s ease;
+}
+
+.btn-reset:hover {
+  transform: scale(1.2);
+}
+
+.btn-reset:active {
+  transform: scale(0.9);
+}
+
+.fitur-bmi {
+  margin-top: 30px;
+}
+
+.fitur-bmi .satu, .dua {
+  text-indent: 20px;
+}
+#hasil {
+  text-align: center;
+  color: #8B322C;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 35px;
+}
+
+#hasilBMI, #kategoriBMI {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+.fyi {
+  margin: 15px;
+  padding: 1rem;
+  width: 90%;
+  margin: auto;
+  border-radius: 25px;
+  text-align: left;
+  background-color: #f8f8f8;
+  color: #8B322C;
+}
+
+.fyi .emoji li {
+  list-style-type: none;
+}
+
+.fyi .emoji li::before {
+  content: "\1F680";
+}
+
+.fyi .definisi, .peringatan, .fyi-end {
+  text-indent: 20px;
+}
+
+.fyi h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column a {
+  color: #bbb;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f1c40f;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+}
