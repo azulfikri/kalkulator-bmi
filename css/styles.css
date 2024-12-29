@@ -11,23 +11,23 @@ body {
 
 .container {
   background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 80%;
-    margin: auto;
-    transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  transition: transform 0.3s ease;
 }
 
 .main-title {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background-color: #8E9EAB;
+  background-color: #8e9eab;
   color: #f8f8f8;
-    border-radius: 10px;
-    margin: 10px;
-    text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
 .main-title .logo-bmi {
@@ -47,14 +47,14 @@ aside {
   width: 50%;
 }
 
-.aside-hasil, .aside-main {
-  padding: 2rem ;
-  
+.aside-hasil,
+.aside-main {
+  padding: 2rem;
 }
 
 .aside-hasil {
   border-radius: 10px;
-  background-color: #D1CCC0;
+  background-color: #d1ccc0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin: 5px;
@@ -63,21 +63,22 @@ aside {
 
 .aside-main {
   border-radius: 10px;
-  background-color: #D1CCC0;
-  color: #8B322C;
+  background-color: #d1ccc0;
+  color: #8b322c;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin: 5px;
   overflow: hidden;
 }
 
-article, section{
+article,
+section {
   text-align: justify;
 }
 
 #bmi-form {
-  color:#FAF3DD;
-  background-color: #6D8764;
+  color: #faf3dd;
+  background-color: #6d8764;
   border: 1px solid #ddd;
   border-radius: 15px;
   padding: 2rem 3rem;
@@ -186,19 +187,25 @@ article, section{
   margin-top: 30px;
 }
 
-.fitur-bmi .satu, .dua {
+.fitur-bmi .satu,
+.dua {
   text-indent: 20px;
 }
 #hasil {
   text-align: center;
-  color: #8B322C;
+  color: #8b322c;
   background-color: #f8f8f8;
   border-radius: 15px;
   padding: 1rem;
   margin: 35px;
 }
 
-#hasilBMI, #kategoriBMI {
+#hasilBMI {
+  font-weight: bold;
+}
+
+#hasilBMI,
+#kategoriBMI {
   text-align: center;
   font-size: 30px;
   margin: 0;
@@ -212,7 +219,7 @@ article, section{
   border-radius: 25px;
   text-align: left;
   background-color: #f8f8f8;
-  color: #8B322C;
+  color: #8b322c;
 }
 
 .fyi .emoji li {
@@ -223,7 +230,9 @@ article, section{
   content: "\1F680";
 }
 
-.fyi .definisi, .peringatan, .fyi-end {
+.fyi .definisi,
+.peringatan,
+.fyi-end {
   text-indent: 20px;
 }
 
@@ -232,15 +241,15 @@ article, section{
 }
 
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    aside {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  aside {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 footer {
